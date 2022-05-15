@@ -2,28 +2,11 @@
   <div id="app">
     <h1>Todo app</h1>
     <hr />
-    <TodoList v-bind:todos="todos" />
+    <router-view />
   </div>
 </template>
 
-<script>
-import TodoList from "./components/TodoList.vue";
-export default {
-  name: "app",
-  data() {
-    return {
-      todos: [
-        { id: 1, title: 'Buy bread', completed: false },
-        { id: 2, title: 'Buy butter', completed: false },
-        { id: 3, title: 'Buy beer', completed: false },
-      ]
-    }
-  },
-  components: {
-    TodoList,
-  },
-};
-</script>
+
 
 <style>
 #app {
